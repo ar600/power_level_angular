@@ -1,0 +1,20 @@
+<h4>Initial Power Level</h4>
+<form class="myForm" (submit)='onSubmit()'>
+  <input type="number" required name="powerlevel" min="1" max="100" [(ngModel)]='powerlevel' >
+  <input type="submit" name="submit" value="Calculate Powers" >
+</form>
+<!-- {{powerlevel}} -->
+<!-- {{player.valid | json}} -->
+
+<div class="wrapper1">
+  <app-human [humanLevel]='human'></app-human>
+  <app-saiyan [saiyanLevel]=human*10></app-saiyan>
+  <app-super-saiyan [superSaiyan]=human*100></app-super-saiyan>
+</div>
+
+<div class="wrapper2">
+    <app-super-saiyan-two [superSaiyanTwo]=human*150> </app-super-saiyan-two>
+    <app-super-saiyan-three [superSaiyanThree]=human*250> </app-super-saiyan-three>
+    <app-super-saiyan-four [superSaiyanFour]=human*500> </app-super-saiyan-four>
+
+</div>
